@@ -9,6 +9,7 @@ const Coincard = ({ coin }) => {
 
           <div>
             <h2>{coin.name}</h2>
+            oi
             <p className="symbol">{coin.symbol.toUpperCase()}</p>
           </div>
         </div>
