@@ -9,7 +9,6 @@ const Coincard = ({ coin }) => {
 
           <div>
             <h2>{coin.name}</h2>
-            oi
             <p className="symbol">{coin.symbol.toUpperCase()}</p>
           </div>
         </div>
@@ -19,7 +18,9 @@ const Coincard = ({ coin }) => {
             coin.price_change_percentage_24h >= 0 ? "positive" : "negative"
           }
         >
-          {coin.price_change_percentage_24h.toFixed(2)}%
+          {coin.price_change_percentage_24h !== null && coin.price_change_percentage_24h !== undefined
+            ? `${coin.price_change_percentage_24h.toFixed(2)}%`
+            : "N/A"}
         </p>
         <p>Market Cap: {coin.market_cap.toLocaleString()}</p>
       </div>
